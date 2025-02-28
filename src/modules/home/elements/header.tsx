@@ -9,7 +9,7 @@ import { ArrowRight } from 'lucide-react'
 import { ShinyButton } from '@/common/components/ui/shine-border'
 import { TextGenerateEffect } from '@/common/components/ui/Text-generate'
 import { word } from '@/common/constants/text'
-// import Orb from '@/common/components/ui/Orb'
+import Orb from '@/common/components/ui/Orb'
 
 
 export default function Header() {
@@ -50,14 +50,14 @@ export default function Header() {
                     className='relative z-10 flex h-1/2 w-full max-w-xs items-center justify-center md:h-full md:w-1/2 md:pr-14 lg:w-1/2 lg:max-w-none'
                 >
                     <div className='z-[-1] h-full w-full fill-neutral-300 dark:fill-neutral-800 md:w-full md:scale-150 lg:w-96'>
-                        {/* <Orb
+                        <Orb
                             hoverIntensity={0.5}
                             rotateOnHover={true}
                             hue={0}
-                            forceHoverState={false} /> */}
+                            forceHoverState={false} />
                     </div>
                     <div className='animate-up-down absolute z-[1] flex h-full w-fit items-center py-7 md:h-fit md:py-0'>
-                        <img src="/wahab.jpg" alt="mobile.webp" width={'100%'} height={'100%'} className='h-full max-h-[250px] rounded-full md:max-h-[350px] lg:max-h-[450px]' />
+                        <img src="/wahab.jpg" alt="mobile.webp" width={'100%'} height={'100%'} className='h-full max-h-[450px]' />
                     </div>
                 </motion.div>
             </header>
