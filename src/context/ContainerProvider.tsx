@@ -1,33 +1,51 @@
-'use client'
-import { createContext, useEffect, useState } from 'react'
-import { usePathname } from 'next/navigation'
-import { ReactNode } from 'react';
+"use client";
+
+import { usePathname } from "next/navigation";
+import {
+    createContext,
+    ReactNode,
+    useEffect,
+    useState,
+} from "react";
 
 interface ContextProps {
     fullPathName: string;
     setFullPathName: (titles: string) => void;
 }
 
-export const ContainerContext = createContext<ContextProps>({
-    fullPathName: '',
-    setFullPathName: () => { },
-});
+export const ContainerContext =
+    createContext<ContextProps>({
+        fullPathName: "",
+        setFullPathName: () => { },
+    });
 
 interface ContainerContextProps {
     children: ReactNode;
 }
 
-export default function ContainerProvider({ children }: ContainerContextProps) {
-    const pathName = usePathname()
-    const [fullPathName, setFullPathName] = useState(pathName)
+export default function ContainerProvider({
+    children,
+}: ContainerContextProps) {
+    const pathName = usePathname();
+    const [fullPathName, setFullPathName] =
+        useState(pathName);
 
     useEffect(() => {
-        setFullPathName(pathName + window.location.hash);
-    }, [])
+        setFullPathName(
+            pathName + window.location.hash
+        );
+    }, []);
 
     return (
-        <ContainerContext.Provider value={{ fullPathName, setFullPathName }}>
-            {children}
-        </ContainerContext.Provider>
+        <>
+            <ContainerContext.Provider
+                value={{
+                    fullPathName,
+                    setFullPathName,
+                }}
+            >
+                {children}
+            </ContainerContext.Provider>
+        </>
     );
 }

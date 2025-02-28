@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ThemeProviderContext from "@/context/ThemeProvider";
 import ContainerProvider from "@/context/ContainerProvider";
 
 const inter = Inter({
@@ -20,12 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`} >
-        <ThemeProviderContext>
-          <ContainerProvider>
-            {children}
-          </ContainerProvider>
-        </ThemeProviderContext>
+      <body className={`${inter.className} antialiased bg-black`} >
+        <ContainerProvider>
+          {children}
+        </ContainerProvider>
       </body>
     </html>
   );

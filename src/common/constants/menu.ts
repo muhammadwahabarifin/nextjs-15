@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { TbBrandVscode, TbCloudComputing, TbStack2 } from "react-icons/tb";
 
 type Project = {
