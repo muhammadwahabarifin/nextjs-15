@@ -57,7 +57,7 @@ export default function Header() {
                             forceHoverState={false} />
                     </div>
                     <div className='animate-up-down absolute z-[1] flex h-full w-fit items-center py-7 md:h-fit md:py-0'>
-                        <img src="/wahab.jpg" alt="mobile.webp" width={'100%'} height={'100%'} className='h-full max-h-[450px]' />
+                        <img src="/wahab.jpg" alt="mobile.webp" width={'100%'} height={'100%'} className='h-full rounded-full md:max-h-[350px] lg:max-h-[450px]' />
                     </div>
                 </motion.div>
             </header>
