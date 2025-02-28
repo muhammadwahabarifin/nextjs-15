@@ -5,8 +5,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import React from 'react'
 import '../../../../public/profile.jpg'
 // import Orb from '@/common/components/ui/Orb'
-import { ArrowRight } from 'lucide-react'
-import { ShinyButton } from '@/common/components/ui/shine-border'
 import { TextGenerateEffect } from '@/common/components/ui/Text-generate'
 import { word } from '@/common/constants/text'
 import Orb from '@/common/components/ui/Orb'
@@ -26,20 +24,18 @@ export default function Header() {
                         className='font-medium text-zinc-400'>Hello,
                     </h1>
                     <span
-                        className=' font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-600'>
+                        className=' font-semibold text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-600'>
                         I'm Wahabarf
                     </span>
                     <TextGenerateEffect
                         words={word} />
 
                     <div className='flex w-fit gap-1 lg:gap-4'>
-                        <ShinyButton className="flex group items-center mt-4">
-                            <span className="flex items-center text-white">
-                                Let's Talk
-                                <ArrowRight className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
-                            </span>
-                        </ShinyButton>
+                        <button className="scale-100 rounded-lg px-7 mt-4 py-2 text-base duration-300 hover:scale-110 bg-zinc-200">
+                            <span className='text-zinc-600'>Let's Talk</span>
+                        </button>
                     </div>
+
                 </motion.div>
 
 

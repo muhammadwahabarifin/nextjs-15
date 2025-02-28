@@ -31,27 +31,28 @@ export default function Navbar() {
                     xmlns="http://www.w3.org/2000/svg" width="35" height="35"
                     viewBox="0 0 24 24" stroke="currentColor"
                     fill="none"
-                    className='text-white'>
+                    className='text-black'
+                    strokeWidth='2'>
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" ></path>
                     <path d="M7 7l5 5l-5 5"></path>
                     <path d="M13 7l5 5l-5 5"></path>
                 </svg>
             </label>
-            {navToggle ? <div onClick={() => setNavToggle(false)} className='absolute top-0 left-0 w-screen h-screen bg-black opacity-50'></div> : ''}
-            <ul className={`absolute top-0 z-30 flex h-screen w-[80%] flex-col bg-[#0f172a] duration-300  md:h-[200vh] md:w-[400px] md:shadow-[200px_-50vh_150px_#0f172a]
+            {navToggle ? <div onClick={() => setNavToggle(false)} className='absolute top-0 left-0 w-screen h-screen bg-[#8a93ff] opacity-50'></div> : ''}
+            <ul className={`absolute top-0 z-30 flex h-screen w-[80%] flex-col bg-white duration-300  md:h-[200vh] md:w-[400px] md:shadow-[200px_-50vh_150px_white]
         ${navToggle ? 'left-0' : '-left-full'}`}>
                 <li>
                     <Link href='/' onClick={() => handleMobileNav(false, ' ')}
                         className='h-fit mx-[10%] mt-12 py-5 flex items-center gap-3 border-b border-stone-400'>
-                        <img src="/profile.jpg" alt="profile.jpg" width='80' height='80' className='rounded-full' />
+                        <img src="/wahab.jpg" alt="profile.jpg" width='80' height='80' className='rounded-full' />
                         <div className='flex flex-col'>
-                            <h2 className='text-4xl font-medium text-white'>WahabArf</h2>
-                            <p className='text-dark'>Full-stack Website Developer</p>
-                            <p className='text-dark'>@wahabarf</p>
+                            <h2 className='text-4xl font-medium text-zinc-600'>WahabArf</h2>
+                            <p className='text-zinc-400'>Full-stack Developer</p>
+                            <p className='text-zinc-400'>@wahabarf</p>
                         </div>
                     </Link>
                 </li>
-                <li className='my-4 mx-[5%] flex flex-col gap-5 text-white'>
+                <li className='my-4 mx-[5%] flex flex-col gap-5 text-zinc-400'>
                     {Menu.map((menu: any, index: number) => (
                         <div key={index}>
                             {navLink(menu, handleMobileNav, fullPathName)}
@@ -62,7 +63,7 @@ export default function Navbar() {
                     <p className='text-dark'>Interested in Working Together?</p>
                     <Link href='/talk' onClick={() => handleMobileNav(false)}
                         className='m-auto bg-dark px-[20%] py-4
-          rounded-md hover:opacity-70 drop-shadow-md duration-300 text-muted'>
+          rounded-md hover:opacity-70 drop-shadow-md duration-300 text-muted-foreground'>
                         Lets Talk
                     </Link>
                     <div className='flex gap-4 my-2'>
@@ -82,13 +83,13 @@ const navLink = (menu: any, handle: any, fullPathName: string) => (
     <Link href={menu.pathName} onClick={() => handle(false, menu.pathName)} className={`w-full px-[5%] py-3
       hover:scale-105 flex items-center 
       gap-2 rounded-xl duration-300 ${(fullPathName == menu.pathName) ?
-            'bg-neutral-300 dark:bg-neutral-800' : 'hover:bg-neutral-300 hover:dark:bg-neutral-800'}`}>
+            'bg-white' : 'bg-white'}`}>
         <menu.Svg className='w-7 h-7' strokeWidth='1' /> {menu.label}
     </Link>
 )
 
 const brandLink = (Svg: any, url: string) => (
-    <a href={url} target='_blank' className='flex text-white hover:opacity-70
+    <a href={url} target='_blank' className='flex text-zinc-600 hover:opacity-70
     hover:scale-110 duration-300 dark:text-neutral-300' aria-label={url}>
         <Svg className='w-7 h-7' />
     </a>
