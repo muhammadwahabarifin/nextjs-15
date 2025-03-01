@@ -46,7 +46,7 @@ export default function Navbar() {
                         className='h-fit mx-[10%] mt-12 py-5 flex items-center gap-3 border-b border-stone-400'>
                         <img src="/wahab.jpg" alt="profile.jpg" width='80' height='80' className='rounded-full' />
                         <div className='flex flex-col'>
-                            <h2 className='text-4xl font-medium text-zinc-600'>WahabArf</h2>
+                            <h2 className='text-4xl font-semibold text-zinc-600'>WahabArf</h2>
                             <p className='text-zinc-400'>Full-stack Developer</p>
                             <p className='text-zinc-400'>@wahabarf</p>
                         </div>

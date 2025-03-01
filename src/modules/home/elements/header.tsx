@@ -4,10 +4,10 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import React from 'react'
 import '../../../../public/profile.jpg'
-// import Orb from '@/common/components/ui/Orb'
 import { TextGenerateEffect } from '@/common/components/ui/Text-generate'
 import { word } from '@/common/constants/text'
 import Orb from '@/common/components/ui/Orb'
+import { Fade } from 'react-awesome-reveal'
 
 
 export default function Header() {
@@ -20,13 +20,27 @@ export default function Header() {
                     transition={{ duration: 1 }}
                     className='w-full h-1/3 md:w-1/2 md:h-full flex flex-col gap-2 justify-center lg:pt-14 px-[5%]
                     z-[1] text-4xl md:text-7xl'>
-                    <h1
-                        className='font-medium text-zinc-400'>Hello,
-                    </h1>
-                    <span
-                        className=' font-semibold text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-600'>
-                        I'm Wahabarf
-                    </span>
+                    <Fade
+                        direction={'left'}
+                        delay={400}
+                        cascade
+                        damping={1e-1}
+                        triggerOnce={true}>
+                        <h1
+                            className='font-medium text-zinc-400'>Hello,
+                        </h1>
+                    </Fade>
+                    <Fade
+                        direction={'left'}
+                        delay={500}
+                        cascade
+                        damping={1e-1}
+                        triggerOnce={true}>
+                        <span
+                            className=' font-semibold text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-600'>
+                            I'm Wahabarf
+                        </span>
+                    </Fade>
                     <TextGenerateEffect
                         words={word} />
 

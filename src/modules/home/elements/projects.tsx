@@ -14,13 +14,13 @@ export default function ProjectsSection() {
     return (
         <section id='projects' className='px-[5%]'>
             <div className='relative flex flex-col items-center'>
-                <div className='flex gap-3 md:items-center'>
-                    <TbStack2 strokeWidth='1' className='w-14 md:w-16 h-full text-blue-300' />
+                <div className='flex gap-3'>
+                    <TbStack2 strokeWidth='1' className='w-14 md:w-20 h-full text-blue-300' />
                     <div className='flex flex-col'>
                         <div className='flex gap-4'>
-                            <h2 className='text-2xl font-semibold md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-600'>Last Projects</h2>
+                            <h2 className='text-4xl font-semibold md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-600'>Last Projects</h2>
                         </div>
-                        <p className='md:text-xl text-muted-foreground'>Here is my last project.</p>
+                        <p className='md:text-xl text-center text-muted-foreground'>Here is my last project.</p>
                     </div>
                 </div>
             </div>
