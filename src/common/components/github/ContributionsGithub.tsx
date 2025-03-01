@@ -9,15 +9,15 @@ export function Contributions() {
     const contributions = [
         {
             title: 'Past Year',
-            value: 309,
+            value: 3,
         },
         {
             title: 'This Month',
-            value: 58,
+            value: 14,
         },
         {
             title: 'This Week',
-            value: 2,
+            value: 12,
         }
     ]
     return (
@@ -66,8 +66,8 @@ export function Contributions() {
                         key={idx}
                     >
                         <div>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-600 font-semibold">{item.title}</span>
-                            <p className="text-2xl font-semibold text-[#5046e6]">{item.value}</p>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-green-600 font-semibold">{item.title}</span>
+                            <p className="text-2xl font-medium text-[#46e6b6]">{item.value}</p>
                         </div>
                     </div>
                 ))}

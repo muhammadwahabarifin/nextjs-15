@@ -1,6 +1,6 @@
 import {
   SiCss3,
-  SiFramer,
+  SiExpress,
   SiHtml5,
   SiJavascript,
   SiNextdotjs,
@@ -98,16 +98,16 @@ export const Projects: Array<Project> = [
         text: "NextJS",
       },
       {
-        SvgIcon: SiFramer,
-        title: "FramerMotion",
-        class: "fill-black",
-        text: "FramerMotion",
-      },
-      {
         SvgIcon: SiTypescript,
         title: "Typescript",
         class: "fill-blue-800 rounded",
         text: "Typescript",
+      },
+      {
+        SvgIcon: SiExpress,
+        title: "ExpressJS",
+        class: "fill-black",
+        text: "ExpressJS",
       },
     ],
   },

@@ -1,57 +1,34 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
-import { Fade } from 'react-awesome-reveal'
 import { Contributions } from '@/common/components/github/ContributionsGithub';
 import Loading from '@/common/components/loading';
+import FadeContent from '@/common/components/ui/FadeContent';
 import React, { Suspense } from 'react'
 import { TbCloudComputing } from 'react-icons/tb';
 
 export default function About() {
     return (
-        <section id='about' className='w-full pt-12 px-[5%]'>
-            <div className='flex flex-col-reverse gap-5 md:gap-0 md:flex-row items-center'>
-                <Fade
-                    direction={'left'}
-                    delay={600}
-                    cascade
-                    damping={1e-1}
-                    triggerOnce={true}
-                    className='w-full md:w-1/2 h-full flex justify-center'>
-                    <div className='w-fit h-full'>
-                        <img src="/myabout.png" alt="mobile" width={'100%'} height={'100%'} className='bg-cover max-h-[500px]' />
+        <FadeContent blur={true} duration={1000} easing="ease-in-out" initialOpacity={0} delay={200}>
+            <section id='about' className='w-full pt-12 px-[5%]'>
+                <div className='flex flex-col-reverse gap-5 md:gap-0 md:flex-row items-center'>
+                    <div
+                        className='w-full md:w-1/2 h-full flex justify-center'>
+                        <div className='w-fit h-full'>
+                            <img src="/myabout.png" alt="mobile" width={'100%'} height={'100%'} className='bg-cover max-h-[500px]' />
+                        </div>
                     </div>
-                </Fade>
-                <div className='w-full md:w-1/2 flex flex-col gap-7'>
-                    <Fade
-                        direction={'right'}
-                        delay={600}
-                        cascade
-                        damping={1e-1}
-                        triggerOnce={true}>
+                    <div className='w-full md:w-1/2 flex flex-col gap-7'>
+
                         <div className='flex gap-3 items-center'>
                             <TbCloudComputing strokeWidth='1' className='w-14 md:w-20 h-full text-blue-300' />
                             <div className='flex flex-col'>
                                 <h2 className='text-4xl font-semibold md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-600'>About Me</h2>
-                                <p className='md:text-xl text-center text-zinc-400'>My description in website development.</p>
+                                <p className='md:text-xl text-zinc-400'>My description in website development.</p>
                             </div>
                         </div>
-                    </Fade>
-                    <Fade
-                        direction={'right'}
-                        delay={700}
-                        cascade
-                        damping={1e-1}
-                        triggerOnce={true}>
                         <p className='w-full text-zinc-600'>
                             <span className='text-4xl font-semibold'>Hello,</span> <br />
                             My name is wahabarf. I am a web developer specializing in React and Laravel frameworks, along with MySQL and PostgreSQL databases. My primary focus is on delivering high-performance websites that are interactive and responsive. With my experience in web application development, I strive to provide users with an optimal experience through attractive designs and exceptional functionality. I enjoy exploring new technologies and continuously learning the best practices to enhance website performance and responsiveness.</p>
-                    </Fade>
-                    <Fade
-                        direction={'right'}
-                        delay={800}
-                        cascade
-                        damping={1e-1}
-                        triggerOnce={true}>
                         <div>
                             <h3 className='text-2xl font-semibold text-zinc-600'>Education</h3>
                             <p className='flex gap-3 text-zinc-500'>Dian Nuswantoro Univercity
@@ -65,24 +42,17 @@ export default function About() {
                             </p>
                             <p className='text-zinc-400'>July 2022</p>
                         </div>
-                    </Fade>
-                    <Fade
-                        direction={'right'}
-                        delay={900}
-                        cascade
-                        damping={1e-1}
-                        triggerOnce={true}>
                         <div>
                             <h3 className='font-semibold text-zinc-600'>Expected year of Graduation</h3>
                             <p className='text-zinc-400'>2025 June</p>
                         </div>
-                    </Fade>
+                    </div>
                 </div>
-            </div>
-            <Suspense fallback={Loading()}>
-                <Contributions />
-            </Suspense>
+                <Suspense fallback={Loading()}>
+                    <Contributions />
+                </Suspense>
 
-        </section>
+            </section>
+        </FadeContent>
     )
 }

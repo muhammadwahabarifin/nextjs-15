@@ -16,9 +16,9 @@ import {
   SiGit,
   SiFacebook,
   SiGithub,
-  SiCodeigniter,
   SiShadcnui,
   SiPrisma,
+  SiExpress,
 } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
 
@@ -74,7 +74,7 @@ export const Skills: Skills = {
     { SvgIcon: SiLaravel, tooltip: "Laravel", class: "fill-red-600" },
     { SvgIcon: SiMysql, tooltip: "MySQL", class: "fill-orange-500" },
     { SvgIcon: SiPostgresql, tooltip: "PostgreSQL", class: "fill-blue-700" },
-    { SvgIcon: SiCodeigniter, tooltip: "Codeigniter4", class: "fill-red-700" },
+    { SvgIcon: SiExpress, tooltip: "ExpressJS", class: "fill-black" },
     { SvgIcon: SiPrisma, tooltip: "PrismaIO", class: "fill-black" },
   ],
   devops: [

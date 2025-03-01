@@ -17,7 +17,7 @@ const Footer = () => (
                 <SiTailwindcss className={`w-8 h-8 fill-blue-400 `} />
             </div>
         </span>
-        <span className='text-white'>Made by Wahabarf. All rights reserved.</span>
+        <span className='text-zinc-400'>Made by Wahabarf. All rights reserved.</span>
     </footer>
 )
 
