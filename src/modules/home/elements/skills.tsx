@@ -33,8 +33,8 @@ export default function SkillsSection() {
         <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} delay={300}>
             <section id='skills' className='w-full px-[5%] flex flex-col gap-5 '>
                 <div className="relative flex flex-col items-center">
-                    <div className="absolute -right-[100px] top-[400px] hidden h-[400px] w-[400px] rounded-full bg-pink-200 opacity-70 blur-3xl md:block"></div>
-                    <div className="absolute -right-[100px] top-0 hidden h-[500px] w-[800px] rounded-full bg-blue-200 opacity-70 blur-3xl md:block"></div>
+                    {/* <div className="absolute -right-[100px] top-[400px] hidden h-[400px] w-[400px] rounded-full bg-pink-200 opacity-70 blur-3xl md:block"></div> */}
+                    {/* <div className="absolute -right-[100px] top-0 hidden h-[500px] w-[800px] rounded-full bg-blue-200 opacity-70 blur-3xl md:block"></div> */}
                     <div className="flex gap-3 md:items-center">
                         <Fade
                             direction="left"
@@ -67,7 +67,7 @@ export default function SkillsSection() {
                                 cascade
                                 damping={0.2}
                                 triggerOnce>
-                                <p className="md:text-xl text-zinc-400">This my skills in software engineering.</p>
+                                <p className="md:text-xl text-zinc-400">Skills in software engineering.</p>
                             </Fade>
                         </div>
                     </div>
@@ -123,7 +123,7 @@ export default function SkillsSection() {
 
                 <div className='flex flex-col gap-7 my-8'>
                     <h1 className='text-2xl flex gap-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-600 font-semibold'>
-                        <TbArrowsSort className='w-7 h-7 animate-bounce text-blue-200' />
+                        <TbArrowsSort className='w-7 h-7 animate-bounce text-blue-300' />
                         API mastery</h1>
 
                     <motion.div

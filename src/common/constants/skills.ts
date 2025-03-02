@@ -10,7 +10,6 @@ import {
   SiSass,
   SiLaravel,
   SiMysql,
-  SiPostgresql,
   SiAmazonrds,
   SiAmazonec2,
   SiGit,
@@ -19,6 +18,7 @@ import {
   SiShadcnui,
   SiPrisma,
   SiExpress,
+  SiMongodb,
 } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
 
@@ -57,6 +57,7 @@ export const Skills: Skills = {
       tooltip: "Typescript",
       class: "fill-blue-800 rounded",
     },
+    { SvgIcon: SiSass, tooltip: "Sass", class: "fill-pink-400" },
   ],
   frontend: [
     {
@@ -68,12 +69,11 @@ export const Skills: Skills = {
     { SvgIcon: SiTailwindcss, tooltip: "TailwindCSS", class: "fill-blue-400" },
     { SvgIcon: SiBootstrap, tooltip: "Bootstrap", class: "fill-purple-500" },
     { SvgIcon: SiShadcnui, tooltip: "ShadcnUI", class: "fill-black" },
-    { SvgIcon: SiSass, tooltip: "Sass", class: "fill-pink-600" },
   ],
   backend: [
     { SvgIcon: SiLaravel, tooltip: "Laravel", class: "fill-red-600" },
     { SvgIcon: SiMysql, tooltip: "MySQL", class: "fill-orange-500" },
-    { SvgIcon: SiPostgresql, tooltip: "PostgreSQL", class: "fill-blue-700" },
+    { SvgIcon: SiMongodb, tooltip: "MongoDB", class: "fill-green-500" },
     { SvgIcon: SiExpress, tooltip: "ExpressJS", class: "fill-black" },
     { SvgIcon: SiPrisma, tooltip: "PrismaIO", class: "fill-black" },
   ],

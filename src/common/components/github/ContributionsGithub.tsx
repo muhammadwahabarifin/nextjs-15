@@ -39,7 +39,7 @@ export function Contributions() {
                 </div>
                 <Fade
                     direction={'right'}
-                    delay={500}
+                    delay={100}
                     cascade
                     damping={1e-1}
                     triggerOnce={true}
@@ -47,7 +47,7 @@ export function Contributions() {
                 </Fade>
                 <Fade
                     direction={'left'}
-                    delay={600}
+                    delay={500}
                     cascade
                     damping={1e-1}
                     triggerOnce={true}>
@@ -62,7 +62,7 @@ export function Contributions() {
                 {contributions.map((item, idx) => (
                     <div
 
-                        className="relative w-full overflow-hidden rounded-md p-3 shadow-2xl shadow-blue-200 backdrop-blur-md"
+                        className="relative w-full overflow-hidden rounded-md p-3 shadow-md shadow-blue-200 backdrop-blur-md"
                         key={idx}
                     >
                         <div>

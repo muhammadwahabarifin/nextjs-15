@@ -6,8 +6,8 @@ import React from 'react'
 import '../../../../public/profile.jpg'
 import { TextGenerateEffect } from '@/common/components/ui/Text-generate'
 import { word } from '@/common/constants/text'
-import Orb from '@/common/components/ui/Orb'
 import { Fade } from 'react-awesome-reveal'
+import Orb from '@/common/components/ui/Orb'
 
 
 export default function Header() {

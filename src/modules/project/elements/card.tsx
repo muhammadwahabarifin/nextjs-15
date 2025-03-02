@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
+import { Badge } from '@/common/components/ui/badge'
 import { BorderBeam } from '@/common/components/ui/border-beam'
 import { Projects } from '@/common/constants/projects'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -12,7 +13,7 @@ export default function Card() {
         <AnimatePresence>
             <motion.div>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pt-5'>
-                    {Projects.slice(0, 3).map((project: any, index: number) => (
+                    {Projects.slice(0, 5).map((project: any, index: number) => (
                         <div key={index}
                             className='w-full h-auto border rounded-xl hover:scale-105 duration-300 flex flex-col shadow-2xl shadow-blue-200 relative'>
                             {/* <a className='absolute px-7 py-1 rounded-bl-xl rounded-tr-xl right-0 bg-black bg-opacity-50 
@@ -36,15 +37,17 @@ export default function Card() {
                             </div>
                             <ul className='h-full flex flex-wrap items-end gap-2 pb-4 px-4 justify-self-end'>
                                 {project.icons.map((icon: any, index_: number) => (
-                                    <div
+                                    <Badge
                                         key={index_}
-                                        className='border bg-zinc-200 inline-flex items-center gap-2 rounded-lg px-2.5 py-0.5'
+                                        variant='secondary'
+                                        className='border inline-flex items-center gap-2 rounded-lg px-2.5 py-0.5'
+                                        style={{ backgroundColor: `${icon.BgClass}` }}
                                     >
                                         <icon.SvgIcon className={`w-4 h-4 ${icon.class} `} />
-                                        <span className='text-sm font-semibolds text-zinc-500'>
+                                        <span className='text-sm font-medium text-white'>
                                             {icon.text}
                                         </span>
-                                    </div>
+                                    </Badge>
                                 ))}
                             </ul>
                         </div>

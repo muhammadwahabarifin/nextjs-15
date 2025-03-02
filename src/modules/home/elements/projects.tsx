@@ -3,12 +3,14 @@
 'use client'
 import Link from 'next/link'
 import React, { useContext } from 'react'
-import { TbStack2, TbEye } from 'react-icons/tb'
+import { TbStack2 } from 'react-icons/tb'
 import { ContainerContext } from '@/context/ContainerProvider'
 import { motion } from 'framer-motion'
 import { Projects } from '@/common/constants/projects'
 import FadeContent from '@/common/components/ui/FadeContent'
 import { BorderBeam } from '@/common/components/ui/border-beam'
+import { Badge } from '@/common/components/ui/badge'
+import { FiArrowUpRight } from 'react-icons/fi'
 
 export default function ProjectsSection() {
     const { setFullPathName } = useContext(ContainerContext)
@@ -59,15 +61,17 @@ export default function ProjectsSection() {
                                 </div>
                                 <ul className='h-full flex flex-wrap items-end gap-2 pb-4 px-4 justify-self-end'>
                                     {project.icons.map((icon: any, index_: number) => (
-                                        <div
+                                        <Badge
                                             key={index_}
-                                            className='border bg-zinc-200 inline-flex items-center gap-2 rounded-lg px-2.5 py-0.5'
+                                            variant='secondary'
+                                            className='border inline-flex items-center gap-2 rounded-lg px-2.5 py-0.5'
+                                            style={{ backgroundColor: `${icon.BgClass}` }}
                                         >
                                             <icon.SvgIcon className={`w-4 h-4 ${icon.class} `} />
-                                            <span className='text-sm font-semibolds text-zinc-500'>
+                                            <span className='text-sm font-medium text-white'>
                                                 {icon.text}
                                             </span>
-                                        </div>
+                                        </Badge>
                                     ))}
                                 </ul>
                             </div>
@@ -78,7 +82,7 @@ export default function ProjectsSection() {
                 <div className='w-full h-24 flex justify-center items-center'>
                     <Link href='/all-projects' onClick={() => setFullPathName('/all-projects')}
                         className='text-blue-600 dark:text-blue-300 flex gap-2 items-center hover:opacity-70 duration-100 self-end'>View All Project
-                        <TbEye className='h-full w-6 animate-pulse' />
+                        <FiArrowUpRight className='h-full w-6' />
                     </Link>
                 </div>
             </section>
