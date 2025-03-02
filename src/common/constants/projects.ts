@@ -90,7 +90,7 @@ export const Projects: Array<Project> = [
       {
         SvgIcon: SiJavascript,
         title: "Javascript",
-        class: "fill-yellow-300",
+        class: "fill-yellow-300 rounded",
         text: "Javascript",
         BgClass: "#cca818",
       },
@@ -122,7 +122,7 @@ export const Projects: Array<Project> = [
         title: "ExpressJS",
         class: "fill-black",
         text: "ExpressJS",
-        BgClass: "#2ea971",
+        BgClass: "#8f8f8f",
       },
       {
         SvgIcon: SiTailwindcss,

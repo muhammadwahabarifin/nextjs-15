@@ -21,7 +21,8 @@ export function Contributions() {
         }
     ]
     return (
-        <div className='mt-12 md:px-[5%]'>
+        <div className='mt-12 md:px-[5%] relative'>
+            <div className='absolute bottom-64 right-[20%] -z-[1] h-80 w-80 rounded-full bg-green-200 blur-3xl dark:bg-purple-900' />
             <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -66,7 +67,7 @@ export function Contributions() {
                         key={idx}
                     >
                         <div>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-green-600 font-semibold">{item.title}</span>
+                            <span className="text-zinc-600 font-semibold">{item.title}</span>
                             <p className="text-2xl font-medium text-[#46e6b6]">{item.value}</p>
                         </div>
                     </div>

@@ -31,7 +31,9 @@ const sectionListVariants = {
 export default function SkillsSection() {
     return (
         <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} delay={300}>
-            <section id='skills' className='w-full px-[5%] flex flex-col gap-5 '>
+            <section id='skills' className='w-full px-[5%] flex flex-col gap-5 relative'>
+                <div className="absolute right-[20%] top-32 -z-[1] h-80 w-80 rounded-full bg-green-200 blur-3xl dark:bg-green-900"></div>
+                <div className="absolute top-10 left-56 -z-[1] h-56 w-56 rounded-full bg-yellow-200 blur-3xl dark:bg-yellow-900"></div>
                 <div className="relative flex flex-col items-center">
                     {/* <div className="absolute -right-[100px] top-[400px] hidden h-[400px] w-[400px] rounded-full bg-pink-200 opacity-70 blur-3xl md:block"></div> */}
                     {/* <div className="absolute -right-[100px] top-0 hidden h-[500px] w-[800px] rounded-full bg-blue-200 opacity-70 blur-3xl md:block"></div> */}
@@ -115,7 +117,6 @@ export default function SkillsSection() {
                         </div>
                     </div>
 
-
                     <div className='absolute left-0 w-full md:relative md:w-1/2 z-[1]'>
                         <Processor />
                     </div>
@@ -148,7 +149,6 @@ export default function SkillsSection() {
                         ))}
                     </motion.div>
                 </div>
-
             </section >
         </FadeContent>
     )

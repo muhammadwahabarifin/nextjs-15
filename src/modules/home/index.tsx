@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <>
             <Header />
-            <main className='my-[20vw] md:my-[5vw] flex flex-col gap-52'>
+            <main className='my-[20vw] md:my-[5vw] flex flex-col gap-52 relative'>
                 <About />
                 <SkillsSection />
                 <ProjectsSection />

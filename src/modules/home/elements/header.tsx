@@ -46,7 +46,7 @@ export default function Header() {
                         className='capitalize' />
 
                     <div className='flex w-fit gap-1 lg:gap-4'>
-                        <button className="scale-100 rounded-lg px-7 mt-4 py-2 text-base duration-300 hover:scale-110 bg-zinc-200">
+                        <button className="scale-100 rounded-lg border-zinc-200 border hover:bg-zinc-200 px-7 mt-4 py-2 text-base duration-300 ">
                             <span className='text-zinc-600'>Let's Talk</span>
                         </button>
                     </div>

@@ -19,6 +19,7 @@ export default function ProjectsSection() {
         <FadeContent
             blur={true} duration={1000} easing="ease-in-out" initialOpacity={0} delay={400}>
             <section id='projects' className='px-[5%]'>
+                <div className="absolute top-10 left-56 -z-[1] h-56 w-56 rounded-full bg-yellow-200 blur-3xl dark:bg-yellow-900"></div>
                 <div className='relative flex flex-col items-center'>
                     <div className='flex gap-3'>
                         <TbStack2 strokeWidth='1' className='w-14 md:w-20 h-full text-blue-300' />
