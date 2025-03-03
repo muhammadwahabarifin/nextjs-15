@@ -22,7 +22,7 @@ export function Contributions() {
     ]
     return (
         <div className='mt-12 md:px-[5%] relative'>
-            <div className='absolute bottom-64 right-[20%] -z-[1] h-80 w-80 rounded-full bg-green-200 blur-3xl dark:bg-purple-900' />
+            {/* <div className='absolute bottom-64 right-[20%] -z-[1] h-80 w-80 rounded-full bg-green-200 blur-3xl dark:bg-purple-900' /> */}
             <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -47,7 +47,7 @@ export function Contributions() {
                     className="text-muted-foreground">My contributions from last year on github.
                 </Fade>
                 <Fade
-                    direction={'left'}
+                    direction={'right'}
                     delay={500}
                     cascade
                     damping={1e-1}
